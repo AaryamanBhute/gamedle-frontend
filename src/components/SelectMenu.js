@@ -34,7 +34,7 @@ function SelectMenu(props) {
         }
         props.assignToken(data.token);
         navigate('/anagrams');
-      }).catch((err)=>{console.log("error getting token");props.assignPopup("Couldn't Connect To Server"); return});
+      }).catch((err)=>{console.log("error getting token", err);props.assignPopup("Couldn't Connect To Server"); return});
   }
 
   return (
