@@ -26,6 +26,7 @@ function SelectMenu(props) {
         }
       )
     };
+    console.log(requestOptions.body)
     fetch('/api/makegame', requestOptions)
       .then(response => response.json())
       .then(data => {
