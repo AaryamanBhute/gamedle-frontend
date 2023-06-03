@@ -1,0 +1,30 @@
+.Home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+  
+  .Title{
+    align-self: center;
+  }
+
+.Games{
+    width: 25%;
+    margin-top: 80px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.Rejoin{
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.Rejoin:hover{
+  cursor: pointer;
+  color: var(--anti-color);
+}

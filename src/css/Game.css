@@ -1,0 +1,50 @@
+.GamePage{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Game{
+    width: 90%;
+    height: 70%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.down, .across{
+    aspect-ratio: 1 / 5;
+    width: 10%;
+    border: 2px solid var(--main-color);
+}
+
+.players{
+    aspect-ratio: 2 / 5;
+    width: 20%;
+    border: 2px solid var(--main-color);
+    margin-left: auto;
+}
+
+.id{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+}
+
+.Buttons{
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.Timer{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 2em;
+}

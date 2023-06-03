@@ -1,0 +1,23 @@
+.Grid{
+    aspect-ratio: 1 / 1;
+    width: 50%;
+    border: 2px solid var(--main-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.GridRow{
+    flex: 1 1 0px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.cell{
+    flex: 1 1 0px;
+    border: 1px solid var(--main-color);
+}
+
+.cell.blocked{
+    background-color: var(--main-color);
+}

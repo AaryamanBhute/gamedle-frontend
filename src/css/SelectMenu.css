@@ -1,0 +1,63 @@
+.overlay{
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.CloseButton{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.CloseButton:hover{
+    background-color: transparent;
+    color: var(--anti-color);
+}
+
+.content{
+    background-color: var(--bg-color);
+    min-height: 10%;
+    padding: 20px 60px 20px 60px;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+select{
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+    padding: 10px;
+    border-radius: 10px;
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-weight: 700;
+}
+
+.PasswordInput{
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+    height: fit-content;
+    color: var(--main-color);
+    text-align: center;
+    border-radius: 10px;
+}
+
+.PasswordInputWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}

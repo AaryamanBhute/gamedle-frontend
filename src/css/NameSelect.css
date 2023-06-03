@@ -1,0 +1,46 @@
+.NameSelect{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 10px;
+    right: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.NameSelect p{
+    padding: 0;
+    margin: 0;
+    margin-right: 10px;
+}
+
+.NameInput{
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+    height: fit-content;
+    color: var(--main-color);
+    text-align: center;
+    border-radius: 10px;
+}
+
+.Submit{
+    width: 30%;
+    background-color: var(--main-color);
+    color: white;
+}
+
+.curName{
+    width: 100%;
+    text-align: center;
+}
+
+p.curName{
+    margin-top: 10px;
+}
+
+.inline{
+    display: flex;
+    width: fit-content;
+}

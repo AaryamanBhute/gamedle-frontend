@@ -1,0 +1,140 @@
+.GamePage{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.GameID{
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5em;
+}
+
+.Timer{
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 1.5em;
+}
+
+.content{
+    border: 1px solid var(--main-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.Letters{
+    display: flex;
+}
+
+.CurWord{
+    display: flex;
+}
+
+.Letters p, .CurWord p{
+    margin: 0;
+    padding: 0;
+}
+
+.Letter{
+    position: relative;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+}
+
+.Letter::before{
+    content:'';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: -5px;
+    top: -5px;
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+}
+
+.Letter p{
+    font-size: 2em;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.Used{
+    border-color: grey;
+    color: grey;
+}
+
+.Used::before{
+    border-color: grey;
+}
+
+.BlankWrapper{
+    position: relative;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+
+.BlankWrapper::before{
+    content:'';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: -5px;
+    top: -5px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+
+.Blank{
+    font-size: 2em;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.ScrambleIcon{
+    width: 30px;
+    margin-left: 10px;
+    height: auto;
+}
+
+.ScrambleIcon:hover{
+    color: var(--anti-color);
+}
+
+.Letters{
+    display: flex;
+}
+
+.LettersWrapper{
+    display: flex;
+    align-items: center;
+}
+
+.GamePage{
+    outline: none;
+}
+
+.PageWrapper{
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+    max-height: 65%;
+}
+
+.SubmittedWords, .PlayerScores{
+    padding: 10px;
+    border: 1px solid var(--main-color);
+    border-radius: 20px;
+    overflow-y: scroll;
+}
