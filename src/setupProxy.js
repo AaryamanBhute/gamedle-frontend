@@ -4,7 +4,7 @@ module.exports = function(app) {
   app.use(
     '/api',
     createProxyMiddleware({
-      target: process.env.NODE_ENV === 'production' ? "https://gamedle-backend.onrender.com" : 'http://localhost:3001',
+      target: process.env.NODE_ENV === 'production' ? "http://gamedle-backend.onrender.com" : 'http://localhost:3001',
       changeOrigin: true,
       pathRewrite: {
         '/api' : '/'
