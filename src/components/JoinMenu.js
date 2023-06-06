@@ -23,7 +23,7 @@ function JoinMenu(props) {
         }
       )
     };
-    fetch('/api/joingame', requestOptions)
+    fetch(`${process.env.REACT_APP_DEV_API_URI}/joingame`, requestOptions)
       .then(response => response.json())
       .then(data => {
         if(data.token === null || data.token === undefined){

@@ -53,6 +53,9 @@ function AnagramsGame(props) {
 
         function handleErrors(err){
             console.log("socket error")
+            props.assignPopup(`Something Went Wrong`)
+            props.assignToken(null)
+            navigate('/')
         }
 
         function invalidWord(){
