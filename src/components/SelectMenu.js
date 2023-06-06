@@ -27,7 +27,7 @@ function SelectMenu(props) {
       )
     };
     console.log(requestOptions.body)
-    fetch(`${process.env.REACT_APP_DEV_API_URI}/makegame`, requestOptions)
+    fetch(`${process.env.NODE_ENV === 'production' ? process.env.REACT_APP_PROD_API_URI : process.env.REACT_APP_DEV_API_URI}/makegame`, requestOptions)
       .then(response => response.json())
       .then(data => {
         if(data.token === null || data.token === undefined){
