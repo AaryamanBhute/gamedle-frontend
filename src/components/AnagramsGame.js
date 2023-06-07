@@ -4,6 +4,7 @@ import { FaExchangeAlt } from "react-icons/fa";
 import jwt from 'jwt-decode'
 import { socket } from '../socket';
 import { useNavigate } from 'react-router-dom';
+import Timer from "./Timer";
 
 function AnagramsGame(props) {
 
@@ -16,6 +17,7 @@ function AnagramsGame(props) {
     const [words, setWords] = useState([])
     const [score, setScore] = useState(0)
     const [players, setPlayers] = useState([])
+    const [finished, setFinished] = useState(false)
 
     useEffect(()=>{
         console.log(words)
@@ -30,6 +32,10 @@ function AnagramsGame(props) {
             props.assignPopup(`Your Game Doesn't Exist`);
             props.assignToken(null)
             navigate('/')
+        }
+
+        function onFinish(){
+            setFinished(true)
         }
 
         function updateWords(data){
@@ -71,6 +77,7 @@ function AnagramsGame(props) {
         socket.on('disconnect', onDisconnect);
         socket.on('connect_error', err => handleErrors(err))
         socket.on('connect_failed', err => handleErrors(err))
+        socket.on('finished', onFinish);
 
         // anagrams
         socket.on('anagrams updated words', updateWords)
@@ -182,8 +189,9 @@ function AnagramsGame(props) {
             <div className="PageWrapper">
                 <div>
                     <p className="GameID">Game ID: {info.id}</p>
-                    <p className="Timer">Timer: {info.start_time}</p>
+                    <Timer startTime={info.start_time}/>
                     <div className="content">
+                        <p>Finished: {finished.toString()}</p>
                         <p>Your Score: {score}</p>
                         <p>Available Letters:</p>
                         <div className="LettersWrapper">
